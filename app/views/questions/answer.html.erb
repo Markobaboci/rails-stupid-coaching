@@ -1,0 +1,15 @@
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 bg-light p-4 rounded shadow-sm">
+      <% unless @answer.nil? %>
+        <div class="mb-3">
+          <p class="fw-bold text-secondary">You: <span class="text-dark"><%= @usersinput %></span></p>
+          <p class="fw-bold text-primary">Coach: <span class="text-dark"><%= @answer %></span></p>
+        </div>
+      <% end %>
+
+      <%= link_to "Ask another question", ask_path, class: "btn btn-primary w-100 mt-3" %>
+    </div>
+  </div>
+</div>
